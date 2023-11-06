@@ -1,3 +1,4 @@
+import 'package:basic_layout/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class OnboardScreen extends StatelessWidget {
@@ -37,7 +38,13 @@ class OnboardScreen extends StatelessWidget {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF30A6AE),
                 shape: const RoundedRectangleBorder(),

@@ -1,4 +1,4 @@
-import 'package:basic_layout/onboard_screen.dart';
+import 'package:basic_layout/screens/onboard_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
