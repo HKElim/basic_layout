@@ -1,4 +1,4 @@
-import 'package:basic_layout/screens/register.dart';
+import 'package:basic_layout/screens/register_screen.dart';
 import 'package:basic_layout/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const Register(),
+                    builder: (context) => const RegisterScreen(),
                   ),
                 );
               },
