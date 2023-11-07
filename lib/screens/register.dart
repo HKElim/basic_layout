@@ -1,8 +1,8 @@
 import 'package:basic_layout/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,30 +12,33 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 45),
         child: Column(
           children: [
-            const SizedBox(height: 100),
+            const SizedBox(height: 150),
             const Text(
-              "Welcome back !",
+              "Welcome Onboard",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
                 color: Colors.black,
               ),
             ),
-            Image.asset("assets/images/p2.png"),
-            const SizedBox(height: 10),
-            const InputField(label: "Enter your email"),
             const SizedBox(height: 20),
-            const InputField(label: "Enter your password"),
-            const Spacer(),
             const Text(
-              "Forget Password",
+              "Let's help you meet up your tasks.",
               style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
-                color: Color(0xFF0E6565),
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 100),
+            const InputField(label: "Enter your full name"),
+            const SizedBox(height: 20),
+            const InputField(label: "Enter your email id"),
+            const SizedBox(height: 20),
+            const InputField(label: "Enter Password"),
+            const SizedBox(height: 20),
+            const InputField(label: "Enter confirm password"),
+            const Spacer(),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
@@ -55,7 +58,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 10),
             const Text.rich(
               TextSpan(
-                text: "Don't have an account ? ",
+                text: "Already have an account ? ",
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w400,
