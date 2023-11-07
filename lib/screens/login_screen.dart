@@ -1,3 +1,4 @@
+import 'package:basic_layout/screens/register.dart';
 import 'package:basic_layout/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,13 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const Register(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF30A6AE),
                 shape: const RoundedRectangleBorder(),

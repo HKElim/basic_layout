@@ -47,7 +47,7 @@ class Register extends StatelessWidget {
                 minimumSize: const Size.fromHeight(52),
               ),
               child: const Text(
-                "Login",
+                "Register",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
