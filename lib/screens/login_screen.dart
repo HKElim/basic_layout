@@ -38,13 +38,7 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const RegisterScreen(),
-                  ),
-                );
-              },
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF30A6AE),
                 shape: const RoundedRectangleBorder(),
@@ -60,21 +54,30 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text.rich(
+            Text.rich(
               TextSpan(
                 text: "Don't have an account ? ",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                 ),
                 children: [
-                  TextSpan(
-                    text: "Sign up",
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF009A9A),
+                  WidgetSpan(
+                    child: GestureDetector(
+                      onTap: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterScreen(),
+                        ),
+                      ),
+                      child: const Text(
+                        "Sign up",
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xFF009A9A),
+                        ),
+                      ),
                     ),
                   ),
                 ],

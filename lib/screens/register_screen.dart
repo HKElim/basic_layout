@@ -1,3 +1,4 @@
+import 'package:basic_layout/screens/login_screen.dart';
 import 'package:basic_layout/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
@@ -56,21 +57,30 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text.rich(
+            Text.rich(
               TextSpan(
                 text: "Already have an account ? ",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                 ),
                 children: [
-                  TextSpan(
-                    text: "Sign up",
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF009A9A),
+                  WidgetSpan(
+                    child: GestureDetector(
+                      onTap: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ),
+                      ),
+                      child: const Text(
+                        "Sign in",
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xFF009A9A),
+                        ),
+                      ),
                     ),
                   ),
                 ],
